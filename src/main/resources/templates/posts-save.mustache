@@ -1,0 +1,25 @@
+{{>layouts/header}}
+
+<div class="section flex-vertical-center">
+    <form class="flex-vertical-center">
+        <div class="title">게시글 등록</div>
+        <div class="input-div-tag">
+            <input type="text" id="title" placeholder=" " style="width: 40rem; height: 5rem; font-size: 1.6rem;">
+            <label for="title">제목</label>
+        </div>
+        <div class="input-div-tag">
+            <input type="text" id="author" placeholder=" " style="width: 40rem; height: 5rem; font-size: 1.6rem;">
+            <label for="author">작성자</label>
+        </div>
+        <div class="input-div-tag">
+            <textarea id="content" placeholder=" " style="width: 40rem; height: 20rem; font-size: 1.6rem;"></textarea>
+            <label for="content">내용</label>
+        </div>
+    </form>
+    <div class="flex-horizontal-space" style="width: 40rem;">
+        <a href="/" role="button" class="negative-button flex-vertical-center" style="width: 10rem; height: 5rem;">취소</a>
+        <button type="button" class="positive-button" id="btn-save" style="width: 10rem; height: 5rem;">등록</button>
+    </div>
+</div>
+
+{{>layouts/footer}}

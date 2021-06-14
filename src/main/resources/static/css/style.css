@@ -1,0 +1,135 @@
+html {
+    font-size: 10px;
+}
+
+html::-webkit-scrollbar{
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+}
+
+.title {
+    font-size: 3.2rem;
+}
+
+.positive-button {
+    background-color: var(--positive-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 2.0rem;
+    text-decoration: none;
+    user-select: none;
+    margin: 2rem auto;
+    transition-duration: 0.2s;
+}
+
+.positive-button:hover {
+    background-color: var(--hover-positive-color);
+    transform: scale(1.05);
+    box-shadow: 0.5rem 0.5rem 0.5rem #bbbbbb;
+    transition-duration: 0.2s;
+}
+
+.negative-button {
+    background-color: var(--negative-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 2.0rem;
+    text-decoration: none;
+    user-select: none;
+    margin: 2rem auto;
+    transition-duration: 0.2s;
+}
+
+.negative-button:hover {
+    background-color: var(--hover-negative-color);
+    transform: scale(1.05);
+    box-shadow: 0.5rem 0.5rem 0.5rem #bbbbbb;
+    transition-duration: 0.2s;
+}
+
+.flex-vertical-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flex-horizontal-space {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+input, select {
+    border: 0.1rem solid black;
+    font-weight: bold;
+    text-align: center;
+    text-align-last: center;
+    transition: 0.2s;
+}
+
+
+
+textarea {
+    border: 0.1rem solid black;
+    font-weight: bold;
+    text-align-last: left;
+    padding: 2rem 2rem;
+}
+
+.input-div-tag {
+    position: relative;
+    display: inline-block;
+    margin: 1.5rem auto;
+}
+
+.input-div-tag > label {
+    position: absolute;
+    padding: 0 0.5rem;
+    transition: 0.2s;
+    opacity: 0.5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+input:focus + label, input:not(:placeholder-shown) + label,
+select:focus + label, select:not(:placeholder-shown) + label,
+textarea:focus + label, textarea:not(:placeholder-shown) + label {
+    opacity: 1;
+    top: 0;
+    left: 5rem;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --positive-color: #0099ff;
+    --hover-positive-color: #007acc;
+    --negative-color: #ff0000;
+    --hover-negative-color: #cc0000;
+}
+
+.width-full {
+    width: 100%;
+}
