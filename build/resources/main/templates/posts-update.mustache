@@ -1,0 +1,30 @@
+{{>layouts/header}}
+
+<div class="section flex-vertical-center">
+    <form class="flex-vertical-center">
+        <div class="title">게시글 수정</div>
+        <div class="input-div-tag">
+            <input type="text" id="id" placeholder=" " style="width: 40rem; height: 5rem; font-size: 1.6rem;" value="{{post.id}}" readonly>
+            <label for="id">글 번호</label>
+        </div>
+        <div class="input-div-tag">
+            <input type="text" id="title" placeholder=" " style="width: 40rem; height: 5rem; font-size: 1.6rem;" value="{{post.title}}">
+            <label for="title">제목</label>
+        </div>
+        <div class="input-div-tag">
+            <input type="text" id="author" placeholder=" " style="width: 40rem; height: 5rem; font-size: 1.6rem;" value="{{post.author}}" readonly>
+            <label for="author">작성자</label>
+        </div>
+        <div class="input-div-tag">
+            <textarea id="content" placeholder=" " style="width: 40rem; height: 20rem; font-size: 1.6rem;" >{{post.content}}</textarea>
+            <label for="content">내용</label>
+        </div>
+    </form>
+    <div class="flex-horizontal-space" style="width: 40rem;">
+        <a href="/" role="button" class="negative-button flex-vertical-center" style="width: 10rem; height: 5rem;">취소</a>
+        <button type="button" class="positive-button" id="btn-update" style="width: 10rem; height: 5rem;">수정</button>
+        <button type="button" class="negative-button" id="btn-delete" style="width: 10rem; height: 5rem;">삭제</button>
+    </div>
+</div>
+
+{{>layouts/footer}}

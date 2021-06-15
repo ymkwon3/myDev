@@ -3,6 +3,27 @@
 <div class="section flex-vertical-center">
     <div class="title">메인 페이지</div>
     <a href="/posts/save" role="button" class="positive-button flex-vertical-center" style="width: 10rem; height: 5rem;">등록</a>
+    <!-- 목록 출력 -->
+    <table>
+        <thead>
+        <tr>
+            <th>게시글 번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>최종수정일</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        {{#posts}}
+            <tr>
+                <td>{{id}}</td>
+                <td><a href="/posts/update/{{id}}">{{title}}</a></td>
+                <td>{{author}}</td>
+                <td>{{modifiedDate}}</td>
+            </tr>
+        {{/posts}}
+        </tbody>
+    </table>
 </div>
 
 {{>layouts/footer}}
